@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            $(document).ready(function(){
+                var vrednost = 1;
+                $('.circle').circleProgress({
+                    value: vrednost
+                        }).on('circle-animation-progress', function(event, progress) {
+                    $(this).find('strong').html(parseInt(100 * vrednost * progress) + '<i>%</i>');
+                });
+            });
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                var vrednost = 0.5;
+                $('.circle2').circleProgress({
+                    value: vrednost
+                        }).on('circle-animation-progress', function(event, progress) {
+                    $(this).find('strong').html(parseInt(100 * vrednost * progress) + '<i>%</i>');
+                });
+            });
+        </script>
+        
+        
+    </head>
+    <body>
+     <div class="circle">
+        <strong></strong>
+        
+    </div>
+
+      <div class="circle2">
+        <strong></strong>
+        
+    </div>
+   
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/circle-progress.js"></script>
+
+
+</body>
+
+</html>
